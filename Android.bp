@@ -1,0 +1,31 @@
+package {
+    default_applicable_licenses: ["external_libutf_license"],
+}
+
+license {
+    name: "external_libutf_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-LPL-1.02",
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: [
+        "NOTICE",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "libutf",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.appsearch",
+        "com.android.extservices",
+    ],
+    min_sdk_version: "14",
+    srcs: ["lib/libutf.a"],
+}

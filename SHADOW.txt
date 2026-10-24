@@ -1,0 +1,4 @@
+shadow prebuilt repo: libutf (target)
+  upstream: external/libutf
+  api-level: 34 (branch 34-20261024)
+  date: 2026-10-24
